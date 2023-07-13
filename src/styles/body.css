@@ -1,0 +1,90 @@
+.background {
+  background-image: url("../assets/motherboard600vertical.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.background > .opacity {
+  background-color: #00000099;
+}
+
+.background > .opacity > .body {
+  background-color: #00000090;
+  color: #fff;
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.hero > img {
+  border-radius: 50%;
+  /* border: solid 2px #fff; */
+  height: 300px;
+  margin: 50px;
+  /* opacity: 50%; */
+}
+
+article {
+  width: 80%;
+  margin: 50px auto 0;
+  line-height: 2rem;
+  text-align: justify;
+  color: #ddd;
+}
+
+article h3 {
+  margin: 30px 0;
+}
+article p {
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+article a {
+  text-decoration: underline;
+  color: #5f5;
+}
+@media (min-width: 800px) {
+  .background {
+    background-image: url("../assets/motherboard1200wide.png");
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    /* padding-left: 15%; */
+  }
+
+  h2 {
+    font-size: 3rem;
+    width: 10px;
+  }
+
+  .h2Header {
+    width: 300px;
+  }
+
+  article {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .content {
+    width: 1200px;
+    margin: 0 auto;
+  }
+}

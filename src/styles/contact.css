@@ -1,0 +1,45 @@
+form.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  width: 90%;
+  padding-bottom: 50px;
+}
+
+form.contact > * {
+  margin: 5px;
+}
+
+form.contact .buttonWrapper {
+  margin: 0 auto;
+
+  margin-top: 30px;
+}
+
+.buttonWrapper div.button {
+  width: 300px;
+  border: solid 2px #fff;
+  background-color: #0001;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.buttonWrapper div.button:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.mailLink {
+  margin-top: 30px;
+}
+@media (min-width: 800px) {
+  form.contact {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  form.contact .buttonWrapper {
+    grid-column: 1 / span 2;
+  }
+}

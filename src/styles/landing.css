@@ -1,0 +1,213 @@
+@font-face {
+  font-family: roboto-header;
+  src: url(../fonts/Roboto-Thin.ttf);
+}
+
+body {
+  background-image: url("../assets/motherboard600vertical.png");
+
+  background-size: 110%;
+  background-position: center top;
+  animation-name: zoom;
+  animation-duration: 6s;
+  overflow: hidden;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 200%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+@keyframes split1 {
+  0% {
+    transform: translateX(-2000px);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+@keyframes split2 {
+  0% {
+    transform: translateX(2000px);
+  }
+  20% {
+    transform: translateX(2000px);
+  }
+  40% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(2000px);
+  }
+}
+@keyframes split3 {
+  0% {
+    transform: translateX(-2000px);
+  }
+  40% {
+    transform: translateX(-2000px);
+  }
+  60% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-2000px);
+  }
+}
+@keyframes split4 {
+  0% {
+    transform: translateX(2000px);
+  }
+  60% {
+    transform: translateX(2000px);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(2000px);
+  }
+}
+h1 {
+  color: #0000;
+  margin: 0;
+  height: 100vh;
+  text-align: center;
+
+  font-family: roboto-header;
+  font-size: 5.5em;
+  line-height: 1.2em;
+
+  padding: 0;
+  background-color: #000;
+  mix-blend-mode: multiply;
+  color: #fff;
+
+  opacity: 85%;
+}
+/* 
+h1.whiteFont {
+  margin: 0;
+  padding: 0;
+  background-color: #0000;
+  color: #fff;
+} */
+
+#jon {
+  display: block;
+  width: 100%;
+  animation: split1;
+  animation-duration: 6s;
+  transform: translateX(-2000px);
+}
+#pitans {
+  display: block;
+  width: 100%;
+  animation: split2;
+  animation-duration: 6s;
+  transform: translateX(2000px);
+}
+#web {
+  display: block;
+  width: 100%;
+  animation: split3;
+  animation-duration: 6s;
+  transform: translateX(-2000px);
+}
+
+#design {
+  display: block;
+  width: 100%;
+  animation: split4;
+  animation-duration: 6s;
+  transform: translateX(2000px);
+}
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.enter {
+  font-size: 5em;
+  display: block;
+  margin: 30% auto 0;
+  width: 50%;
+  color: #000;
+  animation: enter;
+  animation-duration: 10s;
+  padding: 0;
+  background-color: #fff;
+  font-size: 2em;
+  opacity: 40%;
+  border-radius: 5px;
+}
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 40%;
+  }
+}
+@media (min-width: 720px) {
+  body {
+    background-image: url("../assets/motherboard1200wide.png");
+  }
+
+  h1 {
+    font-size: 6em;
+    line-height: 1.1em;
+  }
+}
+
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 8em;
+  }
+  .enter {
+    width: 30%;
+    margin-top: 20%;
+  }
+}
+
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 9em;
+  }
+}
+
+@media (min-width: 2400px) {
+  h1 {
+    font-size: 16em;
+  }
+  .enter {
+    font-size: 8em;
+  }
+}
