@@ -1,5 +1,34 @@
 export const portfolioList = [
   {
+    name: "Learning Augment",
+    url: "https://learningaugment.com/",
+
+    description:
+      "Front end development of a website for a company that provides training solutions, built in React to client specifications.",
+    image: "learning-augment.jpg",
+    tags: ["HTML", "CSS", "Javascript", "React"],
+  },
+  {
+    name: "Satellitez",
+    url: "https://www.satellitez.co.uk/",
+    github: "https://github.com/snowdog773/satellitez",
+    backendGithub: "https://github.com/snowdog773/satellitez-backend",
+    description:
+      "Satellitez is a web application developed for sky watchers, astronomy enthusiasts, satNOGs operators, and all other common or garden space nerds to access quick and easy information in real time about the location of all the man made objects in orbit currently being tracked by Norad. ",
+    image: "satellitez.png",
+    tags: [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "React",
+      "Redux",
+      "Node",
+      "Express",
+      "Three.js",
+      "MongoDB",
+    ],
+  },
+  {
     name: "Hard Hangman",
     url: "https://hard-hangman.pitans.co.uk/",
     github: "https://github.com/snowdog773/hangman",
@@ -19,16 +48,7 @@ export const portfolioList = [
       "MongoDB",
     ],
   },
-  {
-    name: "Blackjack",
-    url: "https://pitans-blackjack.netlify.app/",
-    github: "https://github.com/snowdog773/blackjack",
 
-    description:
-      "Classic card game recreated in React. Player vs an AI dealer.",
-    image: "blackjack-screenshot.png",
-    tags: ["HTML", "CSS", "Javascript", "React"],
-  },
   {
     name: "GTW Hypnotherapy",
     url: "https://www.gtw-hypnotherapy.co.uk",
@@ -38,6 +58,16 @@ export const portfolioList = [
       "Responsive website designed and built in React to a client specification.",
     image: "gtw.png",
     tags: ["HTML", "CSS", "Javascript", "React", "React Router"],
+  },
+  {
+    name: "Blackjack",
+    url: "https://pitans-blackjack.netlify.app/",
+    github: "https://github.com/snowdog773/blackjack",
+
+    description:
+      "Classic card game recreated in React. Player vs an AI dealer.",
+    image: "blackjack-screenshot.png",
+    tags: ["HTML", "CSS", "Javascript", "React"],
   },
   {
     name: "20 Squared",
