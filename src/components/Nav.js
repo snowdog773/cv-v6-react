@@ -21,11 +21,7 @@ const Nav = (props) => {
           </Link>
         </li>
         <li>
-          <a
-            href="https://jon.pitans.co.uk/pdf/cv.pdf"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="/pdf/cv.pdf" target="_blank" rel="noreferrer">
             CV
           </a>
         </li>
