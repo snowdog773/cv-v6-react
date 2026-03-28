@@ -25,7 +25,7 @@ export const portfolioList = [
       "Node",
       "Express",
       "Three.js",
-      "MongoDB",
+      "MySQL",
     ],
   },
   {
