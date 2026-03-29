@@ -42,6 +42,22 @@ const Body = () => {
                 ></Route>
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route
+                  path="/formSuccess"
+                  element={
+                    <p style={{ textAlign: "center" }}>
+                      Your message has been sent successfully!
+                    </p>
+                  }
+                />
+                <Route
+                  path="/formFail"
+                  element={
+                    <p style={{ textAlign: "center" }}>
+                      Form submission failed. Please try again.
+                    </p>
+                  }
+                />
               </Routes>
             </div>
           </div>

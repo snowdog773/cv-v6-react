@@ -1,33 +1,26 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
-  const [name, setName] = useState();
-  const [org, setOrg] = useState();
-  const [phone, setPhone] = useState();
-  const [email, setEmail] = useState();
-  const [message, setMessage] = useState();
+  const form = useRef();
+  const navigate = useNavigate();
+  const sendForm = (e) => {
+    e.preventDefault();
 
-  const sendForm = () => {
-    if (name && email && message) {
-      fetch("https://portfolioformapi.pitans.co.uk/formHandler", {
-        method: "POST",
-        body: JSON.stringify({
-          name,
-          org,
-          phone,
-          email,
-          message,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
+    emailjs
+      .sendForm("service_unbrk9d", "template_ilhaly7", form.current, {
+        publicKey: "u_g8_7UwyRjyDpWIP",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          navigate("/formSuccess");
         },
-      }).then(
-        alert(
-          "Form submission successful. I aim to reply to messages within 24 hours"
-        )
+        (error) => {
+          console.log("FAILED...", error.text);
+          navigate("/formFail");
+        },
       );
-    } else {
-      alert("please complete all required fields");
-    }
   };
 
   return (
@@ -36,32 +29,32 @@ const Contact = () => {
       <article>
         <h3>Contact</h3>
 
-        <form className="contact">
+        <form className="contact" ref={form} onSubmit={(e) => sendForm(e)}>
           <label htmlFor="name">
             Name <span>(reqd)</span>
           </label>
           <input
             type="text"
             id="name"
-            name="name"
+            name="user_name"
             required
-            onChange={(e) => setName(e.target.value)}
+            // onChange={(e) => setName(e.target.value)}
           />
 
           <label htmlFor="org">Organisation</label>
           <input
             type="text"
             id="org"
-            name="org"
-            onChange={(e) => setOrg(e.target.value)}
+            name="user_org"
+            // onChange={(e) => setOrg(e.target.value)}
           />
 
           <label htmlFor="phone">Telephone</label>
           <input
             type="phone"
             id="phone"
-            name="phone"
-            onChange={(e) => setPhone(e.target.value)}
+            name="user_phone"
+            // onChange={(e) => setPhone(e.target.value)}
           />
 
           <label htmlFor="email">
@@ -70,9 +63,9 @@ const Contact = () => {
           <input
             type="email"
             id="email"
-            name="email"
+            name="user_email"
             required
-            onChange={(e) => setEmail(e.target.value)}
+            // onChange={(e) => setEmail(e.target.value)}
           />
 
           <label htmlFor="message">
@@ -84,12 +77,18 @@ const Contact = () => {
             rows="10"
             cols="60"
             required
-            onChange={(e) => setMessage(e.target.value)}
+            // onChange={(e) => setMessage(e.target.value)}
           ></textarea>
           <div className="buttonWrapper">
-            <div className="button" onClick={() => sendForm()}>
-              Submit
+            <div className="button">
+              <button
+                type="submit"
+                style={{ all: "unset", cursor: "pointer", width: "100%" }}
+              >
+                Submit
+              </button>
             </div>
+            {/* <div className="button"></div> */}
 
             <p className="mailLink">
               Or email me at{" "}
